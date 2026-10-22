@@ -1,0 +1,122 @@
+/* ===== Estilos generales ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* La página ocupa toda la pantalla: cabecera arriba, footer abajo
+   y la zona central se estira para llenar el espacio que sobra. */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+}
+
+/* ===== Cabecera con imagen de fondo ===== */
+/* Si añades una imagen en img/fondo.jpg se verá de fondo.
+   Si no existe, se muestra un fondo gris claro. */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  padding: 0 1rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url("../img/fondo.jpg") center / cover no-repeat,
+    #eee;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* ===== Barra de navegación (4 celdas iguales) ===== */
+.menu {
+  border-bottom: 1px solid #000;
+}
+
+.menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  flex: 1 1 0;
+  border-right: 1px solid #000;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 40px;
+  padding: 0.4rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.activo {
+  background: #eee;
+}
+
+/* ===== Contenido principal (zona central grande) ===== */
+.principal {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+.pie {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+.pie p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* ===== Móvil: la navegación pasa a columna ===== */
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+}
