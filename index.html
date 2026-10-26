@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentación: Git Flow</title>
+  <style>
+    :root {
+      --texto: #1f2328;
+      --fondo: #ffffff;
+      --suave: #f4f6f8;
+      --borde: #d0d7de;
+      --acento: #2a5298;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --texto: #e6edf3;
+        --fondo: #0d1117;
+        --suave: #161b22;
+        --borde: #30363d;
+        --acento: #6ea8fe;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--texto);
+      background: var(--fondo);
+    }
+
+    header, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+    }
+
+    header { border-bottom: 1px solid var(--borde); }
+    header h1 { margin-bottom: 0.25rem; }
+    header p { margin-top: 0; opacity: 0.8; }
+
+    a { color: var(--acento); }
+
+    h2 {
+      margin-top: 2rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    code {
+      padding: 0.1rem 0.3rem;
+      background: var(--suave);
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    footer { border-top: 1px solid var(--borde); font-size: 0.9em; opacity: 0.8; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Desarrollo con Git Flow</h1>
+    <p>Documentación del proceso del curso de JavaScript aplicado a elementos HTML.</p>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. Introducción ===== -->
+    <section id="introduccion">
+      <h2>1. Metodología: Git Flow</h2>
+      <p>
+        Git Flow es una forma de organizar el trabajo con ramas. Cada tipo de tarea tiene su propia
+        rama, y así el código estable queda separado del que está en desarrollo:
+      </p>
+      <ul>
+        <li><code>main</code>: versiones estables y publicadas.</li>
+        <li><code>develop</code>: donde se junta el trabajo en curso.</li>
+        <li><code>feature/*</code>: una funcionalidad nueva.</li>
+        <li><code>release/*</code>: preparación de una versión antes de publicarla.</li>
+        <li><code>hotfix/*</code>: corrección de algo ya publicado.</li>
+      </ul>
+      <p>
+        La usamos porque el equipo es de tres personas y el proyecto tiene varias secciones: cada una
+        se desarrolla por separado, se evitan conflictos y el historial queda ordenado para el cliente.
+      </p>
+    </section>
+
+    <!-- ===== 2. Proceso ===== -->
+    <section id="proceso">
+      <h2>2. Proceso realizado</h2>
+
+      <h3>Usuario 1: repositorio y estructura inicial</h3>
+      <p>
+        Se crea el repositorio en GitHub con las ramas <code>main</code> y <code>develop</code>. Sobre
+        <code>develop</code> se añade el boilerplate (HTML5 Boilerplate) y se adapta la página con la
+        cabecera, la barra de navegación, el texto del Home y el footer.
+      </p>
+
+      <h3>Usuario 2: dos features</h3>
+      <p>
+        Crea <code>feature/contingutHTML</code> con la sección "Modificar contenido HTML" y
+        <code>feature/atributsHTML</code> con la sección "Modificar atributos HTML". Cada una se
+        fusiona en <code>develop</code> mediante un Pull Request.
+      </p>
+
+      <h3>Usuario 3: feature y release v1.0</h3>
+      <p>
+        Crea <code>feature/estilsCSS</code> con la sección "Modificar estilos CSS". Después, con las
+        tres features en <code>develop</code>, crea <code>release/v1.0</code> y la fusiona en
+        <code>main</code> con la etiqueta <code>v1.0</code>.
+      </p>
+
+      <h3>Usuario 1: hotfix</h3>
+      <p>
+        Durante las pruebas mejora la sección de contenido HTML en
+        <code>hotfix/milloresV_1_0</code>, que sale de <code>main</code> y se fusiona en
+        <code>main</code> y <code>develop</code>.
+      </p>
+    </section>
+
+    <!-- ===== 3. Problemas ===== -->
+    <section id="problemas">
+      <h2>3. Problemas resueltos</h2>
+      <ul>
+        <li>
+          <strong>Pull Request hacia la rama equivocada:</strong> uno iba a <code>main</code> en lugar
+          de <code>develop</code>. Se creó otro con la base correcta.
+        </li>
+        <li>
+          <strong>Push rechazado:</strong> las ramas locales estaban desactualizadas respecto a
+          GitHub. Se sincronizaron con el repositorio remoto y se rehízo el cierre de la release.
+        </li>
+        <li>
+          <strong>Conflicto en <code>index.html</code>:</strong> el menú se había modificado en dos
+          ramas. Se conservó la versión con los cuatro enlaces correctos.
+        </li>
+        <li>
+          <strong>Etiqueta v1.0 mal colocada:</strong> se borró y se volvió a crear sobre el merge de
+          la release.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== 4. Documentación ===== -->
+    <section id="documentacion">
+      <h2>4. Documentación</h2>
+      <p>
+        <a href="documentacion/Actv%20%20Sistema%20control%20de%20versions%20-%20Marc%20Bellver%20Franc%C3%A9s.pdf" target="_blank">
+          Actv  Sistema control de versions - Marc Bellver Francés.pdf
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Repositorio: <a href="https://github.com/Marcfrances12/Projecte-control-ver-Despl">Marcfrances12/Projecte-control-ver-Despl</a></p>
+  </footer>
+
+</body>
+
+</html>
