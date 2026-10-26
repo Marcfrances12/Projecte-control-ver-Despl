@@ -1,0 +1,48 @@
+*   [33m80feb11[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m merge: hotfix milloresV_1_0 en develop [Usuario 1]
+[31m|[m[32m\[m  
+* [32m\[m   [33m9fd304a[m merge: release v1.0 en develop [Usuario 3]
+[33m|[m[34m\[m [32m\[m  
+[33m|[m [34m|[m [32m|[m *   [33mb0b6bc3[m[33m ([m[1;33mtag: [m[1;33mv1.0.1[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m merge: hotfix milloresV_1_0 [Usuario 1]
+[33m|[m [34m|[m [32m|[m [35m|[m[32m\[m  
+[33m|[m [34m|[m [32m|[m [35m|[m[32m/[m  
+[33m|[m [34m|[m [32m|[m[32m/[m[35m|[m   
+[33m|[m [34m|[m * [35m|[m [33mbab8798[m[33m ([m[1;31morigin/hotfix/milloresV_1_0[m[33m, [m[1;32mhotfix/milloresV_1_0[m[33m)[m fix(contenido): mejora la sección de contenido HTML [Usuario 1]
+[33m|[m [34m|[m [35m|[m[35m/[m  
+[33m|[m [34m|[m *   [33m621acd6[m[33m ([m[1;33mtag: [m[1;33mv1.0[m[33m)[m merge: release v1.0 [Usuario 3]
+[33m|[m [34m|[m [1;31m|[m[34m\[m  
+[33m|[m [34m|[m [1;31m|[m[34m/[m  
+[33m|[m [34m|[m[34m/[m[1;31m|[m   
+[33m|[m * [1;31m|[m   [33m85c783a[m[33m ([m[1;31morigin/release/v1.0[m[33m, [m[1;32mrelease/v1.0[m[33m)[m merge: actualiza index
+[33m|[m [1;33m|[m[33m\[m [1;31m\[m  
+[33m|[m [1;33m|[m[33m/[m [1;31m/[m  
+[33m|[m[33m/[m[1;33m|[m [1;31m|[m   
+* [1;33m|[m [1;31m|[m [33mae5280a[m chore:ignora node_modules [Usuario1]
+* [1;33m|[m [1;31m|[m   [33m6a947b8[m Merge pull request #4 from Marcfrances12/main
+[1;35m|[m[1;31m\[m [1;33m\[m [1;31m\[m  
+[1;35m|[m [1;31m|[m [1;33m|[m[1;31m/[m  
+[1;35m|[m [1;31m|[m[1;31m/[m[1;33m|[m   
+[1;35m|[m * [1;33m|[m   [33m42d7e1b[m Merge pull request #3 from Marcfrances12/feature/estilsCSS
+[1;35m|[m [31m|[m[32m\[m [1;33m\[m  
+[1;35m|[m [31m|[m * [1;33m|[m [33mfa0ae32[m[33m ([m[1;31morigin/feature/estilsCSS[m[33m, [m[1;32mfeature/estilsCSS[m[33m)[m feat(estilos): añade ejemplo de modificar estilos CSS [Usuario 3]
+[1;35m|[m [31m|[m[1;35m/[m [1;33m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [1;33m|[m   
+[1;35m|[m * [1;33m|[m   [33mea50d84[m Merge pull request #2 from Marcfrances12/feature/atributsHTML
+[1;35m|[m [33m|[m[34m\[m [1;33m\[m  
+[1;35m|[m * [34m|[m [1;33m|[m [33mde76b15[m Cambiar nav menu
+[1;35m|[m * [34m|[m [1;33m|[m   [33m0e6b7ca[m Merge pull request #1 from Marcfrances12/feature/contingutHTML
+[1;35m|[m [35m|[m[36m\[m [34m\[m [1;33m\[m  
+[1;35m|[m [35m|[m * [34m|[m [1;33m|[m [33md633b54[m[33m ([m[1;31morigin/feature/contingutHTML[m[33m, [m[1;32mfeature/contingutHTML[m[33m)[m feat(contenido): añade ejemplo de modificar contenido HTML [Usuario 2]
+[1;35m|[m [35m|[m[1;35m/[m [34m/[m [1;33m/[m  
+[1;35m|[m[1;35m/[m[35m|[m [34m|[m [1;33m|[m   
+[1;35m|[m [35m|[m [34m|[m * [33m1a2ea20[m cambios
+[1;35m|[m [35m|[m [34m|[m * [33m090290a[m chore(release): prepara versión 1.0 [Usuario 3]
+[1;35m|[m [35m|[m[1;35m_[m[34m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[35m|[m [34m|[m   
+[1;35m|[m [35m|[m [34m|[m * [33m49d855c[m[33m ([m[1;31morigin/feature/atributsHTML[m[33m, [m[1;32mfeature/atributsHTML[m[33m)[m cambios adtributos
+[1;35m|[m [35m|[m [34m|[m[34m/[m  
+[1;35m|[m [35m|[m * [33m8886bb8[m feat(atributos): añade ejemplo de modificar atributos HTML [Usuario 2]
+[1;35m|[m [35m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[35m|[m   
+* [35m|[m [33m3acd07c[m feat(home): añade estructura inicial con boilerplate H5BP [Usuario 1]
+[35m|[m[35m/[m  
+* [33mf1ced7d[m Initial commit
