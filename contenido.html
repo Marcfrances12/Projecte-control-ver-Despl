@@ -31,6 +31,13 @@
     <p id="texto">Este es el texto original.</p>
     <button onclick="cambiarTexto()">Cambiar texto</button>
 
+<button onclick="restaurarTexto()">Restaurar texto</button>
+
+<h3>Ejemplo 2: escribe tu propio texto</h3>
+<input type="text" id="entrada" placeholder="Escribe algo...">
+<button onclick="mostrarTexto()">Mostrar</button>
+<p id="salida"></p>
+
     <h3>Código</h3>
 <pre><code>&lt;p id="texto"&gt;Este es el texto original.&lt;/p&gt;
 &lt;button onclick="cambiarTexto()"&gt;Cambiar texto&lt;/button&gt;
@@ -40,7 +47,9 @@
       Al pulsar el botón se ejecuta la función <code>cambiarTexto()</code>.
       Con <code>document.getElementById("texto")</code> localizamos el párrafo que tiene
       ese <code>id</code>. Después, la propiedad <code>innerHTML</code> nos permite
-      sustituir lo que hay dentro del elemento por un contenido nuevo, CONTENIDO DESDE MEJORAS
+      sustituir lo que hay dentro del elemento por un contenido nuevo, 
+	CONTENIDO DESDE MEJORAS
+	Usamos en el ejemplo 2 textContent en luegar de innerHTML
 
     </p>
   </main>
@@ -53,6 +62,16 @@
       // 2. Cambiamos su contenido
       parrafo.innerHTML = "¡El texto ha cambiado con JavaScript!";
     }
+function restaurarTexto() {
+  // Volvemos a poner el texto original
+  document.getElementById("texto").innerHTML = "Este es el texto original.";
+}
+
+function mostrarTexto() {
+  	// Leemos lo que ha escrito el usuario y lo mostramos en el párrafo
+  	const valor = document.getElementById("entrada").value;
+  	document.getElementById("salida").textContent = valor;
+	}	
   </script>
 
 </body>
