@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modificar contenido HTML</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header class="cabecera">
+    <h1>Curso de JavaScript aplicado a elementos HTML</h1>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contenido.html" class="activo">Modificar contenido HTML</a></li>
+      <li><a href="estilos.html">Modificar estilos CSS</a></li>
+      <li><a href="atributos.html">Modificar atributos HTML</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="principal">
+    <h2>Modificar contenido HTML</h2>
+
+    <h3>Ejemplo</h3>
+    <p id="texto">Este es el texto original.</p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+    <h3>Código</h3>
+<pre><code>&lt;p id="texto"&gt;Este es el texto original.&lt;/p&gt;
+&lt;button onclick="cambiarTexto()"&gt;Cambiar texto&lt;/button&gt;
+
+    <h3>Explicación</h3>
+    <p>
+      Al pulsar el botón se ejecuta la función <code>cambiarTexto()</code>.
+      Con <code>document.getElementById("texto")</code> localizamos el párrafo que tiene
+      ese <code>id</code>. Después, la propiedad <code>innerHTML</code> nos permite
+      sustituir lo que hay dentro del elemento por un contenido nuevo.
+    </p>
+  </main>
+
+  <script>
+    function cambiarTexto() {
+      // 1. Buscamos el párrafo por su id
+      const parrafo = document.getElementById("texto");
+
+      // 2. Cambiamos su contenido
+      parrafo.innerHTML = "¡El texto ha cambiado con JavaScript!";
+    }
+  </script>
+
+</body>
+
+</html>
