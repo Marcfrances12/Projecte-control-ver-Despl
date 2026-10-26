@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modificar atributos HTML</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+  <header class="cabecera">
+    <h1>Curso de JavaScript aplicado a elementos HTML</h1>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contenido.html">Modificar contenido HTML</a></li>
+      <li><a href="estilos.html">Modificar estilos CSS</a></li>
+      <li><a href="atributos.html" class="activo">Modificar atributos HTML</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="principal">
+    <h2>Modificar atributos HTML</h2>
+
+    <h3>Ejemplo</h3>
+    <p>
+      Enlace actual:
+      <a id="enlace" href="https://example.com" target="_blank">Ir a Example</a>
+    </p>
+    <p id="resultado">Atributo href actual: https://example.com</p>
+    <button onclick="cambiarEnlace()">Cambiar destino del enlace</button>
+
+   <h3>Explicación</h3>
+    <p>
+      Los atributos son los datos que van dentro de la etiqueta, como <code>href</code>,
+      <code>src</code> o <code>id</code>. Con <code>setAttribute("href", valor)</code>
+      cambiamos su valor y con <code>getAttribute("href")</code> lo leemos. Después de
+      pulsar el botón, el enlace lleva a otra dirección sin recargar la página.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pie">
+    <p>&copy; 2026 Curso de JavaScript e interacción con HTML</p>
+  </footer>
+
+  <script>
+    function cambiarEnlace() {
+      // 1. Buscamos el enlace por su id
+      const enlace = document.getElementById("enlace");
+
+      // 2. Cambiamos el valor de su atributo href
+      enlace.setAttribute("href", "https://developer.mozilla.org");
+
+      // 3. Leemos el atributo para comprobar que ha cambiado
+      const nuevo = enlace.getAttribute("href");
+      document.getElementById("resultado").innerHTML = "Atributo href actual: " + nuevo;
+    }
+  </script>
+
+</body>
+
+</html>
